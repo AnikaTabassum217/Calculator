@@ -6,3 +6,8 @@ function myfunction(){
 }
 //https://www.fwait.com/how-to-change-text-color-in-javascript/
 
+// function myfunction(){
+// 	var obj1 = document.getElementById("myid1");
+// 	obj1.styel.color= 'red';
+// }
+
