@@ -2,37 +2,34 @@
 	<html>
 	<head>
 		<title><Employee Information Submit</title>
+	    <link rel= "stylesheet" href="emp.css" type="text/css">
+	    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	    <script src="employee.js"></script>
+	    <script src="fetch.js"></script>
+
+
 	</head>
 	<body>
+	
 
-	<form>
-		<table>
-			<tr>
-				<td>
-					Employee ID:
-				</td>
-				<td>
-					<input type="text" placeholder = "id" name="">
-				</td>
-			</tr>
-
-
-
+	<form method="post" action="http://localhost:9090/api/create">
+		    <table>
+			
 	            <tr>
 				<td>
 					Employee Name:
 				</td>
 				<td>
-					<input type="text" placeholder = "name" name="">
+					<input type="text" placeholder = "name" name="name">
 				</td>
-			</tr>
+			     </tr>
 
 			     <tr>
 				<td>
 					Age:
 				</td>
 				<td>
-					<input type="text" placeholder = "age" name="">
+					<input type="text" placeholder = "age" name="age">
 				</td>
 			</tr>
 
@@ -41,7 +38,7 @@
 					Address:
 				</td>
 				<td>
-					<input type="text" placeholder = "address" name="">
+					<input type="text" placeholder = "address" name="address">
 				</td>
 			</tr>
 
@@ -50,7 +47,7 @@
 					Phone No:
 				</td>
 				<td>
-					<input type="text" placeholder = "Phone No" name="">
+					<input type="text" placeholder = "Phone No" name="phoneNumber">
 				</td>
 			</tr>
 
@@ -61,11 +58,11 @@
 				</td>
 				<td>
 			
-					<select>
+					<select name="department">
 						
-						<option>CSE</option>
-						<option>EEE</option>
-						<option>IPE</option>
+						<option value="CSE">CSE</option>
+						<option value="EEE">EEE</option>
+						<option value="IPE">IPE</option>
 					</select>
 				</td>
 			</tr>
@@ -75,7 +72,7 @@
 					Date Create:
 				</td>
 				<td>
-					<input type="text" placeholder = "Date Create" name="">
+					<input type="text" placeholder = "Date Create" name="dateCreate">
 				</td>
 			</tr>
 
@@ -85,41 +82,26 @@
 					Date Update:
 				</td>
 				<td>
-					<input type="text" placeholder = "Date Update" name="">
+					<input type="text" placeholder = "Date Update" name="dateUpdate">
 				</td>
 			</tr>
 
-			<tr>
-				<td>
-					City Id:
-				</td>
-				<td>
-					<input type="text" placeholder = "City Id" name="">
-				</td>
-
-				<tr>
+			
 				<td>
 					City Name:
 				</td>
 				<td>
-					<select>
+					<select name="cityId">
 						
-						<option>Dhaka</option>
-						<option>Rangpur</option>
-						<option>Kustia</option>
-						<option>Narayngonj</option>
+						<option value="1">Dhaka</option>
+						<option value="2">Rangpur</option>
+						<option value="3">Kustia</option>
+						<option value="4">Narayngonj</option>
 					</select>
 				</td>
 			    </tr>
 
-			    <tr>
-				<td>
-					Postal Code:
-				</td>
-				<td>
-					<input type="text" placeholder = "Postal Code" name="">
-				</td>
-			</tr>
+			    
 
 			<tr>
 
