@@ -9,21 +9,35 @@
 
            form.display.value =form.display.value + x;
 		}
+
 	</script>
+
+	<link rel= "stylesheet" href="calculator.css">
 </head>
 <body>
 
+	<!--style>
+       body {
+          background-color: coral;
+           }
+        </style-->
+	
 
-<form action="" name="form">
 
+<form action="" name="form"  >
+
+<table width="300" class="cal1" align="Center" >
 		<tr>
 			<td>
-				<input type="text" value="" name="display">
+				<input align="Center" type="text" value="" name="display">
 				<input type="Button" value= "Clear" onclick="display.value= null">
 			
 			</td>
 		</tr>
-		<table border="1" height = "200" width="300" >
+
+	</table>
+	<div>
+		<table class="cal1" border="1" height = "200" width="300" align="Center">
 		<tr align="Center">
 				
 			<td><input type="Button" value = "1" onclick="calculate(this.value)"></td>
@@ -32,6 +46,8 @@
 			<td><input type="Button" value = "/" onclick="calculate(this.value)"></td>
 		
 		</tr>
+
+	
 		<tr align="Center">
             <td><input type="Button" value = "4" onclick="calculate(this.value)"></td>
 			<td><input type="Button" value = "5" onclick="calculate(this.value)"></td>
@@ -59,5 +75,6 @@
 		</tr>
 	</table>
 </form>
+</div>
 </body>
 </html>
