@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Employee Information Submit</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="employeeList.js"></script>
+	   
+	</head>
+	<body>
+
+		<!--BUTTON id = "getEmployeebtn">Load</BUTTON-->
+
+		<table border="1" align="Center">
+			<tr>
+		
+		<td>SL</td>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Age</td>
+		<td>Address</td>
+		<td>phoneNumber</td>
+		<td>Department</td>
+	    <td>DateCreate</td>
+	    <td>DateUpdate</td>
+	    <td>CityId</td>
+	    <td>CityName</td>
+	    <td>PostalCode</td>
+	</tr>
+
+	<tbody id="dataBody">
+	</tbody>
+
+    </table>
+		
+	</body>
+	</html>
+========================================
+
+
+$(document).ready(function(){
+	alert("hi");
+  //$("#getEmployeebtn").click(function(){
+    //alert("yes load");
+
+      $.get("http://localhost:9090/api/findAllEmployee", function(data, status){
+      //alert("Data: " + data + "\nStatus: " + status);
+
+      console.log(data);
+
+      var tableBodyHtml = "";
+      $.each(data, function( index, value ) {
+      tableBodyHtml += "<tr>";
+      tableBodyHtml += "<td>"+(index+1)+"</td>";
+      tableBodyHtml += "<td>"+value.id+"</td>";
+      tableBodyHtml += "<td>"+value.name+"</td>";
+      tableBodyHtml += "<td>"+value.age+"</td>";
+      tableBodyHtml += "<td>"+value.address+"</td>";
+      tableBodyHtml += "<td>"+value.phoneNumber+"</td>";
+      tableBodyHtml += "<td>"+value.department+"</td>";
+      tableBodyHtml += "<td>"+value.dateCreate+"</td>";
+      tableBodyHtml += "<td>"+value.dateUpdate+"</td>";
+      tableBodyHtml += "<td>"+value.city.id+"</td>";
+      tableBodyHtml += "<td>"+value.city.name+"</td>";
+      tableBodyHtml += "<td>"+value.city.postalCode+"</td>";
+      tableBodyHtml += "</tr>";
+  });
+
+  //console.log(tableBodyHtml);
+
+  $("#dataBody").html(tableBodyHtml);
+
+    });
+  });
+//});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
